@@ -1,0 +1,101 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 26/12/2017 08:01
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-001-chisel-1:before { content: "\f100"; }
+.flaticon-002-wood-plane:before { content: "\f101"; }
+.flaticon-003-rake:before { content: "\f102"; }
+.flaticon-004-axe-1:before { content: "\f103"; }
+.flaticon-005-torch:before { content: "\f104"; }
+.flaticon-006-compass:before { content: "\f105"; }
+.flaticon-007-anvil:before { content: "\f106"; }
+.flaticon-008-sealant-gun:before { content: "\f107"; }
+.flaticon-009-toolbox:before { content: "\f108"; }
+.flaticon-010-fork-1:before { content: "\f109"; }
+.flaticon-011-axe:before { content: "\f10a"; }
+.flaticon-012-spade:before { content: "\f10b"; }
+.flaticon-013-shovel-1:before { content: "\f10c"; }
+.flaticon-014-pickaxe:before { content: "\f10d"; }
+.flaticon-015-multitool:before { content: "\f10e"; }
+.flaticon-016-shovel:before { content: "\f10f"; }
+.flaticon-017-fork:before { content: "\f110"; }
+.flaticon-018-plunger:before { content: "\f111"; }
+.flaticon-019-paintbrush:before { content: "\f112"; }
+.flaticon-020-ruler:before { content: "\f113"; }
+.flaticon-021-cutter:before { content: "\f114"; }
+.flaticon-022-pliers-2:before { content: "\f115"; }
+.flaticon-023-pliers-1:before { content: "\f116"; }
+.flaticon-024-wire-cutter:before { content: "\f117"; }
+.flaticon-025-clamp-2:before { content: "\f118"; }
+.flaticon-026-spanner-3:before { content: "\f119"; }
+.flaticon-027-spanner-2:before { content: "\f11a"; }
+.flaticon-028-hammer-drill:before { content: "\f11b"; }
+.flaticon-029-spanner-1:before { content: "\f11c"; }
+.flaticon-030-spanner:before { content: "\f11d"; }
+.flaticon-031-handsaw-1:before { content: "\f11e"; }
+.flaticon-032-hammer-1:before { content: "\f11f"; }
+.flaticon-033-welder:before { content: "\f120"; }
+.flaticon-034-chainsaw:before { content: "\f121"; }
+.flaticon-035-tape-measure:before { content: "\f122"; }
+.flaticon-036-allen-keys:before { content: "\f123"; }
+.flaticon-037-jigsaw:before { content: "\f124"; }
+.flaticon-038-nail-gun:before { content: "\f125"; }
+.flaticon-039-wheel-barrow:before { content: "\f126"; }
+.flaticon-040-scraper-3:before { content: "\f127"; }
+.flaticon-041-scraper-2:before { content: "\f128"; }
+.flaticon-042-hammer:before { content: "\f129"; }
+.flaticon-043-clamp-1:before { content: "\f12a"; }
+.flaticon-044-handsaw:before { content: "\f12b"; }
+.flaticon-045-adjustable-spanner:before { content: "\f12c"; }
+.flaticon-046-work-bench:before { content: "\f12d"; }
+.flaticon-047-trowel:before { content: "\f12e"; }
+.flaticon-048-chop-saw:before { content: "\f12f"; }
+.flaticon-049-jackhammer:before { content: "\f130"; }
+.flaticon-050-drill-1:before { content: "\f131"; }
+.flaticon-051-scraper-1:before { content: "\f132"; }
+.flaticon-052-scraper:before { content: "\f133"; }
+.flaticon-053-clamp:before { content: "\f134"; }
+.flaticon-054-chisel:before { content: "\f135"; }
+.flaticon-055-power-saw-1:before { content: "\f136"; }
+.flaticon-056-saw-blade:before { content: "\f137"; }
+.flaticon-057-hacksaw:before { content: "\f138"; }
+.flaticon-058-staple-gun:before { content: "\f139"; }
+.flaticon-059-level:before { content: "\f13a"; }
+.flaticon-060-paint-roller:before { content: "\f13b"; }
+.flaticon-061-pipe-wrench:before { content: "\f13c"; }
+.flaticon-062-screwdriver-3:before { content: "\f13d"; }
+.flaticon-063-screwdriver-2:before { content: "\f13e"; }
+.flaticon-064-power-saw:before { content: "\f13f"; }
+.flaticon-065-mallet:before { content: "\f140"; }
+.flaticon-066-pliers:before { content: "\f141"; }
+.flaticon-067-screwdriver-1:before { content: "\f142"; }
+.flaticon-068-screwdriver:before { content: "\f143"; }
+.flaticon-069-hand-drill:before { content: "\f144"; }
+.flaticon-070-drill:before { content: "\f145"; }

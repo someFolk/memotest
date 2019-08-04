@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingTop="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="25dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/primaryGreyBackgroundForWhite">
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/memotest_dialog_description_input"
+            android:fontFamily="@font/googlesansregular"
+            android:textSize="16sp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint="Today’s genetics studies still have more questions than answers. A rightly chosen topic for your paper won’t only result in a good grade, but also make an exceptional contribution to science."
+            android:padding="18dp"
+            android:minLines="3"
+            android:maxLines="10"
+            app:backgroundTint="@color/colorWhite"
+            android:background="@color/fui_transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/memotest_dialog_description_cancel"
+            android:textAllCaps="false"
+            android:background="@drawable/xml_round_corners_grey"
+            android:textColor="@color/googleChromeTextGrey"
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:padding="8dp"
+            android:fontFamily="@font/googlesansregular"
+            app:layout_constraintTop_toBottomOf="@id/memotest_dialog_description_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/memotest_dialog_description_submit"
+            android:layout_marginTop="10dp"
+    />
+
+    <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:fontFamily="@font/googlesansregular"
+            android:id="@+id/memotest_dialog_description_submit"
+            android:textAllCaps="false"
+            android:background="@drawable/xml_round_corners_blue"
+            android:textColor="@color/colorWhite"
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/memotest_dialog_description_input"
+            app:layout_constraintStart_toEndOf="@id/memotest_dialog_description_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

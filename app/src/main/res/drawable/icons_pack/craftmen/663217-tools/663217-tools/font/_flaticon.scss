@@ -1,0 +1,179 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 26/12/2017 08:01
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-001-chisel-1:before { content: "\f100"; }
+.flaticon-002-wood-plane:before { content: "\f101"; }
+.flaticon-003-rake:before { content: "\f102"; }
+.flaticon-004-axe-1:before { content: "\f103"; }
+.flaticon-005-torch:before { content: "\f104"; }
+.flaticon-006-compass:before { content: "\f105"; }
+.flaticon-007-anvil:before { content: "\f106"; }
+.flaticon-008-sealant-gun:before { content: "\f107"; }
+.flaticon-009-toolbox:before { content: "\f108"; }
+.flaticon-010-fork-1:before { content: "\f109"; }
+.flaticon-011-axe:before { content: "\f10a"; }
+.flaticon-012-spade:before { content: "\f10b"; }
+.flaticon-013-shovel-1:before { content: "\f10c"; }
+.flaticon-014-pickaxe:before { content: "\f10d"; }
+.flaticon-015-multitool:before { content: "\f10e"; }
+.flaticon-016-shovel:before { content: "\f10f"; }
+.flaticon-017-fork:before { content: "\f110"; }
+.flaticon-018-plunger:before { content: "\f111"; }
+.flaticon-019-paintbrush:before { content: "\f112"; }
+.flaticon-020-ruler:before { content: "\f113"; }
+.flaticon-021-cutter:before { content: "\f114"; }
+.flaticon-022-pliers-2:before { content: "\f115"; }
+.flaticon-023-pliers-1:before { content: "\f116"; }
+.flaticon-024-wire-cutter:before { content: "\f117"; }
+.flaticon-025-clamp-2:before { content: "\f118"; }
+.flaticon-026-spanner-3:before { content: "\f119"; }
+.flaticon-027-spanner-2:before { content: "\f11a"; }
+.flaticon-028-hammer-drill:before { content: "\f11b"; }
+.flaticon-029-spanner-1:before { content: "\f11c"; }
+.flaticon-030-spanner:before { content: "\f11d"; }
+.flaticon-031-handsaw-1:before { content: "\f11e"; }
+.flaticon-032-hammer-1:before { content: "\f11f"; }
+.flaticon-033-welder:before { content: "\f120"; }
+.flaticon-034-chainsaw:before { content: "\f121"; }
+.flaticon-035-tape-measure:before { content: "\f122"; }
+.flaticon-036-allen-keys:before { content: "\f123"; }
+.flaticon-037-jigsaw:before { content: "\f124"; }
+.flaticon-038-nail-gun:before { content: "\f125"; }
+.flaticon-039-wheel-barrow:before { content: "\f126"; }
+.flaticon-040-scraper-3:before { content: "\f127"; }
+.flaticon-041-scraper-2:before { content: "\f128"; }
+.flaticon-042-hammer:before { content: "\f129"; }
+.flaticon-043-clamp-1:before { content: "\f12a"; }
+.flaticon-044-handsaw:before { content: "\f12b"; }
+.flaticon-045-adjustable-spanner:before { content: "\f12c"; }
+.flaticon-046-work-bench:before { content: "\f12d"; }
+.flaticon-047-trowel:before { content: "\f12e"; }
+.flaticon-048-chop-saw:before { content: "\f12f"; }
+.flaticon-049-jackhammer:before { content: "\f130"; }
+.flaticon-050-drill-1:before { content: "\f131"; }
+.flaticon-051-scraper-1:before { content: "\f132"; }
+.flaticon-052-scraper:before { content: "\f133"; }
+.flaticon-053-clamp:before { content: "\f134"; }
+.flaticon-054-chisel:before { content: "\f135"; }
+.flaticon-055-power-saw-1:before { content: "\f136"; }
+.flaticon-056-saw-blade:before { content: "\f137"; }
+.flaticon-057-hacksaw:before { content: "\f138"; }
+.flaticon-058-staple-gun:before { content: "\f139"; }
+.flaticon-059-level:before { content: "\f13a"; }
+.flaticon-060-paint-roller:before { content: "\f13b"; }
+.flaticon-061-pipe-wrench:before { content: "\f13c"; }
+.flaticon-062-screwdriver-3:before { content: "\f13d"; }
+.flaticon-063-screwdriver-2:before { content: "\f13e"; }
+.flaticon-064-power-saw:before { content: "\f13f"; }
+.flaticon-065-mallet:before { content: "\f140"; }
+.flaticon-066-pliers:before { content: "\f141"; }
+.flaticon-067-screwdriver-1:before { content: "\f142"; }
+.flaticon-068-screwdriver:before { content: "\f143"; }
+.flaticon-069-hand-drill:before { content: "\f144"; }
+.flaticon-070-drill:before { content: "\f145"; }
+    
+    $font-Flaticon-001-chisel-1: "\f100";
+    $font-Flaticon-002-wood-plane: "\f101";
+    $font-Flaticon-003-rake: "\f102";
+    $font-Flaticon-004-axe-1: "\f103";
+    $font-Flaticon-005-torch: "\f104";
+    $font-Flaticon-006-compass: "\f105";
+    $font-Flaticon-007-anvil: "\f106";
+    $font-Flaticon-008-sealant-gun: "\f107";
+    $font-Flaticon-009-toolbox: "\f108";
+    $font-Flaticon-010-fork-1: "\f109";
+    $font-Flaticon-011-axe: "\f10a";
+    $font-Flaticon-012-spade: "\f10b";
+    $font-Flaticon-013-shovel-1: "\f10c";
+    $font-Flaticon-014-pickaxe: "\f10d";
+    $font-Flaticon-015-multitool: "\f10e";
+    $font-Flaticon-016-shovel: "\f10f";
+    $font-Flaticon-017-fork: "\f110";
+    $font-Flaticon-018-plunger: "\f111";
+    $font-Flaticon-019-paintbrush: "\f112";
+    $font-Flaticon-020-ruler: "\f113";
+    $font-Flaticon-021-cutter: "\f114";
+    $font-Flaticon-022-pliers-2: "\f115";
+    $font-Flaticon-023-pliers-1: "\f116";
+    $font-Flaticon-024-wire-cutter: "\f117";
+    $font-Flaticon-025-clamp-2: "\f118";
+    $font-Flaticon-026-spanner-3: "\f119";
+    $font-Flaticon-027-spanner-2: "\f11a";
+    $font-Flaticon-028-hammer-drill: "\f11b";
+    $font-Flaticon-029-spanner-1: "\f11c";
+    $font-Flaticon-030-spanner: "\f11d";
+    $font-Flaticon-031-handsaw-1: "\f11e";
+    $font-Flaticon-032-hammer-1: "\f11f";
+    $font-Flaticon-033-welder: "\f120";
+    $font-Flaticon-034-chainsaw: "\f121";
+    $font-Flaticon-035-tape-measure: "\f122";
+    $font-Flaticon-036-allen-keys: "\f123";
+    $font-Flaticon-037-jigsaw: "\f124";
+    $font-Flaticon-038-nail-gun: "\f125";
+    $font-Flaticon-039-wheel-barrow: "\f126";
+    $font-Flaticon-040-scraper-3: "\f127";
+    $font-Flaticon-041-scraper-2: "\f128";
+    $font-Flaticon-042-hammer: "\f129";
+    $font-Flaticon-043-clamp-1: "\f12a";
+    $font-Flaticon-044-handsaw: "\f12b";
+    $font-Flaticon-045-adjustable-spanner: "\f12c";
+    $font-Flaticon-046-work-bench: "\f12d";
+    $font-Flaticon-047-trowel: "\f12e";
+    $font-Flaticon-048-chop-saw: "\f12f";
+    $font-Flaticon-049-jackhammer: "\f130";
+    $font-Flaticon-050-drill-1: "\f131";
+    $font-Flaticon-051-scraper-1: "\f132";
+    $font-Flaticon-052-scraper: "\f133";
+    $font-Flaticon-053-clamp: "\f134";
+    $font-Flaticon-054-chisel: "\f135";
+    $font-Flaticon-055-power-saw-1: "\f136";
+    $font-Flaticon-056-saw-blade: "\f137";
+    $font-Flaticon-057-hacksaw: "\f138";
+    $font-Flaticon-058-staple-gun: "\f139";
+    $font-Flaticon-059-level: "\f13a";
+    $font-Flaticon-060-paint-roller: "\f13b";
+    $font-Flaticon-061-pipe-wrench: "\f13c";
+    $font-Flaticon-062-screwdriver-3: "\f13d";
+    $font-Flaticon-063-screwdriver-2: "\f13e";
+    $font-Flaticon-064-power-saw: "\f13f";
+    $font-Flaticon-065-mallet: "\f140";
+    $font-Flaticon-066-pliers: "\f141";
+    $font-Flaticon-067-screwdriver-1: "\f142";
+    $font-Flaticon-068-screwdriver: "\f143";
+    $font-Flaticon-069-hand-drill: "\f144";
+    $font-Flaticon-070-drill: "\f145";
