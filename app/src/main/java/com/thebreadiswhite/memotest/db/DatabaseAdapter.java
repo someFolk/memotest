@@ -3,6 +3,7 @@ package com.thebreadiswhite.memotest.db;
 import androidx.room.ColumnInfo;
 import com.google.firebase.database.Exclude;
 
+import java.util.HashMap;
 import java.util.Map;
 
 // This class is a concrete foundation of every object
@@ -22,39 +23,107 @@ public abstract class DatabaseAdapter
     @ColumnInfo(name = "server_key")
     protected String serverKey;
 
+    private Map<String, Object> dataMap;
+
     // The timestamp of which the
     // row has been created.
     @ColumnInfo(name = "timestamp")
     protected long timestamp;
 
+    // This method is responsible of getting the data of the
+    // specified object and map it so it can go onto the server.
+    public Map<String, Object> getDataMap()
+    {
+        return dataMap;
+    }
 
+    // Checking whether the datamap is initialized
+    // Typically gets called by the put operations on this abstract class
+    protected boolean isDataMapInitialized(boolean create)
+    {
+        if(dataMap != null)
+        {
+            return true;
+        }
+        if(dataMap == null && create)
+        {
+            dataMap = new HashMap<>();
+            return true;
+        }
+        return false;
+    }
+
+    // Checking whther the data-map is initialized
+    // This method is for outside use purposes and quick-access
+    protected boolean isDataMapInitialized()
+    {
+        return isDataMapInitialized(false);
+    }
+
+    // Getters Setters
     public int getClientKey()
     {
         return clientKey;
     }
-
     public void setClientKey(int clientKey)
     {
         this.clientKey = clientKey;
     }
-
     public String getServerKey()
     {
         return serverKey;
     }
-
     public void setServerKey(String serverKey)
     {
         this.serverKey = serverKey;
     }
-
     public long getTimestamp()
     {
         return timestamp;
     }
-
     public void setTimestamp(long timestamp)
     {
         this.timestamp = timestamp;
+    }
+
+
+    // Supporting boolean
+    public void addDataToMap(String key, Boolean data)
+    {
+        if(isDataMapInitialized(true))
+        {
+            dataMap.put(key, data);
+        }
+    }
+
+    // Supporting String
+    public void addDataToMap(String key, String data)
+    {
+        if(isDataMapInitialized(true))
+        {
+            dataMap.put(key, data);
+        }
+    }
+
+    // Supporting integer
+    public void addDataToMap(String key, int data)
+    {
+        if(isDataMapInitialized(true))
+        {
+            dataMap.put(key, data);
+        }
+    }
+
+    // Supporting maps within maps
+    // This method is super effective because you can import
+    // Other SQL tables onto the same document on the server
+    // This might need polishing because
+    // 1. how does the object gonna rebuild itself after it's map has retrieved
+    public void addDataToMap(String key, Map data)
+    {
+        if(isDataMapInitialized(true))
+        {
+            dataMap.put(key, data);
+        }
     }
 }

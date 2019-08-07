@@ -1,18 +1,23 @@
 package com.thebreadiswhite.memotest.ui;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.*;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.thebreadiswhite.memotest.Memotest;
 import com.thebreadiswhite.memotest.MemotestStack;
 import com.thebreadiswhite.memotest.R;
+import com.thebreadiswhite.memotest.db.instance.multi.MultiDatabase;
 import com.thebreadiswhite.memotest.db.instance.room.RoomInstance;
 import com.thebreadiswhite.memotest.dialogs.MemotestDialogNewStack;
 import com.thebreadiswhite.memotest.util.FavouriteConst;
@@ -56,6 +61,53 @@ public class MemotestFrontPage extends AppCompatActivity implements MemotestDial
         startActivity(gotothere);
     }
 
+    // Pushing new document onto the collection
+    public String firestoreInsetWithKey(Memotest object)
+    {
+        // Check if internet is available
+
+
+        // Reserve a document in the specified location.
+        // This happens because we call .document() and than .set()
+        DocumentReference rootRef = MultiDatabase.getInstance(getApplicationContext()).getFirestoreInstance().collection("memotest").document();
+        String id = rootRef.getId();
+        rootRef.set(object).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d("", "Document Snapshot successfully written!!");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.w("tag", "Error writing Document Snapshot", e);
+            }
+        });
+
+        return id;
+    }
+
+    // Pushing new document onto the collection
+    public String firestoreBruteAdd(Memotest object)
+        {
+            // Reserve a document in the specified location.
+            // This happens because we call .document() and than .set()
+            CollectionReference rootRef = MultiDatabase.getInstance(getApplicationContext()).getFirestoreInstance().collection("memotest");
+
+            rootRef.add(object).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                @Override
+                public void onSuccess(DocumentReference documentReference) {
+                    Log.d("", "DocumentSnapshot written with ID: " + documentReference.getId());
+                }
+            })
+                    .addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.w("", "Error adding document", e);
+                }
+            });
+
+            return rootRef.getId();
+        }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -63,38 +115,49 @@ public class MemotestFrontPage extends AppCompatActivity implements MemotestDial
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memotest_front_page);
 
-        // Hides the keyboard that is automatically opens when the activity starts
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        // Clears focus from the search box
-        ((EditText) findViewById(R.id.memotest_frontpage_search)).setCursorVisible(false);
-        // TODO: optimize the cursor and whne the edit text is visible
 
-        // Getting items and inflating
-        RoomInstance db = RoomInstance.getAppDatabase(getApplicationContext());
-        List<MemotestStack> items =  db.memotestStack().getAllStacks();
-        if(items.size() > 1)
-        {
-            for(int i = 0; i < items.size(); i++)
-            {
-                xmlAddStackToUI(items.get(i),i);
-            }
-        }
-        else // no items to show
-        {
-            ((TextView) findViewById(R.id.memotest_front_page_nothingtoshow)).setVisibility(View.VISIBLE);
-        }
+        // TESTTTT
+        Memotest memo = new Memotest(0,"the front", "The BaCk", FavouriteConst.FAVOURITE,1,1,1,1);
+        String message = firestoreInsetWithKey(memo);
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        return;
 
-        // Back button initialize
-        ConstraintLayout newStackButton = (ConstraintLayout) findViewById(R.id.memotest_front_page_new_stack_button);
-        newStackButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                MemotestDialogNewStack dialog = new MemotestDialogNewStack();
-                dialog.show(getSupportFragmentManager(),"TAG");
-            }
-        });
+
+
+//
+//        // Hides the keyboard that is automatically opens when the activity starts
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+//
+//        // Clears focus from the search box
+//        ((EditText) findViewById(R.id.memotest_frontpage_search)).setCursorVisible(false);
+//        // TODO: optimize the cursor and whne the edit text is visible
+//
+//        // Getting items and inflating
+//        RoomInstance db = RoomInstance.getAppDatabase(getApplicationContext());
+//        List<MemotestStack> items =  db.memotestStack().getAllStacks();
+//        if(items.size() > 1)
+//        {
+//            for(int i = 0; i < items.size(); i++)
+//            {
+//                xmlAddStackToUI(items.get(i),i);
+//            }
+//        }
+//        else // no items to show
+//        {
+//            ((TextView) findViewById(R.id.memotest_front_page_nothingtoshow)).setVisibility(View.VISIBLE);
+//        }
+//
+//        // Back button initialize
+//        ConstraintLayout newStackButton = (ConstraintLayout) findViewById(R.id.memotest_front_page_new_stack_button);
+//        newStackButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                MemotestDialogNewStack dialog = new MemotestDialogNewStack();
+//                dialog.show(getSupportFragmentManager(),"TAG");
+//            }
+//        });
 
     }
 

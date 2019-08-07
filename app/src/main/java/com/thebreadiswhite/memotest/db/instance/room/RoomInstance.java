@@ -9,6 +9,8 @@ import com.thebreadiswhite.memotest.MemotestStack;
 import com.thebreadiswhite.memotest.db.dao.MemotestDao;
 import com.thebreadiswhite.memotest.db.dao.MemotestStackConverter;
 import com.thebreadiswhite.memotest.db.dao.MemotestStackDao;
+import com.thebreadiswhite.memotest.systems.positionable.Positionable;
+import com.thebreadiswhite.memotest.systems.positionable.db.PositionableDao;
 
 // Database annotation
 @Database(entities = {Memotest.class, MemotestStack.class}, version = 1, exportSchema = false)
@@ -24,12 +26,10 @@ public abstract class RoomInstance extends androidx.room.RoomDatabase
     // Room Instance
     private static RoomInstance INSTANCE;
 
-    // System Daos
-    public abstract MemotestDao memotest();
-    public abstract MemotestStackDao memotestStack();
-
-    public static RoomInstance getAppDatabase(Context context) {
-        if (INSTANCE == null) {
+    public static RoomInstance getAppDatabase(Context context)
+    {
+        if (INSTANCE == null)
+        {
             INSTANCE =
                     Room.databaseBuilder(context.getApplicationContext(), RoomInstance.class, DATABASE_NAME)
 
@@ -43,16 +43,24 @@ public abstract class RoomInstance extends androidx.room.RoomDatabase
         return INSTANCE;
     }
 
-//    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
-//        @Override
-//        public void migrate(SupportSQLiteDatabase database) {
-//            //database.execSQL("ALTER TABLE users "
-//            //        +"ADD COLUMN address TEXT");
-//
-//        }
-//    };
-
-    public static void destroyInstance() {
+    public static void destroyInstance()
+    {
         INSTANCE = null;
     }
+
+    // System Daos
+    public abstract MemotestDao memotest();
+
+    public abstract MemotestStackDao memotestStack();
+
+    //    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+    //        @Override
+    //        public void migrate(SupportSQLiteDatabase database) {
+    //            //database.execSQL("ALTER TABLE users "
+    //            //        +"ADD COLUMN address TEXT");
+    //
+    //        }
+    //    };
+
+    public abstract PositionableDao positionable();
 }

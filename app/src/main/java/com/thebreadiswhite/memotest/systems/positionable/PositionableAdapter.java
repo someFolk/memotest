@@ -1,10 +1,8 @@
 package com.thebreadiswhite.memotest.systems.positionable;
 
+// Every positionable object
+// will implement this interface.
 public interface PositionableAdapter {
-
-    // This method helps with the rotation
-    // of a positionable object with another
     int getPosition();
-
     void setPosition(int count);
 }
