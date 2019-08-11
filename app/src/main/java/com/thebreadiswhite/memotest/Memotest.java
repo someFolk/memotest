@@ -4,13 +4,14 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
-import com.thebreadiswhite.memotest.db.dao.FavouriteConstConverter;
+import com.thebreadiswhite.memotest.db.memotest.util.FavouriteConstConverter;
+import com.thebreadiswhite.memotest.db.multidatabase.DatabaseAdapter;
 import com.thebreadiswhite.memotest.util.FavouriteConst;
-import com.thebreadiswhite.memotest.systems.positionable.Positionable;
+import com.thebreadiswhite.memotest.util.systems.positionable.Positionable;
 
 
 @Entity(tableName = "memotest")
-public class Memotest
+public class Memotest extends DatabaseAdapter
 {
 
     // This is primary key which is assign
