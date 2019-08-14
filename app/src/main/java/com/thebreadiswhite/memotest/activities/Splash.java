@@ -1,6 +1,7 @@
 package com.thebreadiswhite.memotest.activities;
 
 
+import android.app.AlarmManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ public class Splash extends AppCompatActivity
 
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
+
+        onBoot();
 
         //
         //        startService(new Intent(getApplicationContext(), FireBaseChangesWorker.class));
@@ -61,5 +64,14 @@ public class Splash extends AppCompatActivity
                 Splash.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
+    }
+
+    // This function will handle all the stuff that
+    // required when the app first booting for example:
+    // 1. Setting alarms
+    // 2. Fetch data from DB
+    private void onBoot()
+    {
+        AlarmManager alarmManager= (AlarmManager) getApplicationContext().getSystemService(ALARM_SERVICE);
     }
 }

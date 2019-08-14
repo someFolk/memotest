@@ -11,17 +11,12 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.*;
 import androidx.annotation.ColorInt;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import com.thebreadiswhite.memotest.Memotest;
-import com.thebreadiswhite.memotest.MemotestStack;
+import com.thebreadiswhite.memotest.modules.memotest.Memotest;
 import com.thebreadiswhite.memotest.R;
-import com.thebreadiswhite.memotest.activities.classefied.Ui;
-import com.thebreadiswhite.memotest.db.memotest.memotest.MemotestDBH;
-import com.thebreadiswhite.memotest.db.memotest.stack.MemotestStackDBH;
-import com.thebreadiswhite.memotest.db.multidatabase.instance.room.RoomInstance;
+import com.thebreadiswhite.memotest.modules.memotest.MemotestDBH;
 import com.thebreadiswhite.memotest.dialogs.MemotestDialogClosePlay;
 import com.thebreadiswhite.memotest.util.FavouriteConst;
 import com.thebreadiswhite.memotest.util.MemotestConfig;
@@ -315,14 +310,14 @@ public class MemotestPlay extends AppCompatActivity implements MemotestDialogClo
 
                 ImageView favImage = (ImageView) findViewById(R.id.memotest_play_favourite_image);
                 if(target.getFavourite() == FavouriteConst.REGULAR) {
-                    if(favButtonIsFav != false) {
+                    if(favButtonIsFav) {
                         favImage.setImageResource(R.drawable.memotest_start_empty);
                         favButtonIsFav = false;
                     }
 
                 }else
                     {
-                        if(favButtonIsFav) {
+                        if( ! favButtonIsFav) {
                             favImage.setImageResource(R.drawable.memotest_star_gold);
                             favButtonIsFav = true;
                         }

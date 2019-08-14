@@ -7,17 +7,17 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import com.thebreadiswhite.memotest.Memotest;
-import com.thebreadiswhite.memotest.MemotestStack;
+import com.thebreadiswhite.memotest.modules.memotest.Memotest;
+import com.thebreadiswhite.memotest.modules.stack.MemotestStack;
 import com.thebreadiswhite.memotest.R;
-import com.thebreadiswhite.memotest.db.memotest.memotest.MemotestDBH;
-import com.thebreadiswhite.memotest.db.memotest.stack.MemotestStackDBH;
-import com.thebreadiswhite.memotest.db.multidatabase.instance.room.RoomInstance;
+import com.thebreadiswhite.memotest.modules.memotest.MemotestDBH;
+import com.thebreadiswhite.memotest.modules.stack.MemotestStackDBH;
 import com.thebreadiswhite.memotest.dialogs.MemotestDialogDescription;
 import com.thebreadiswhite.memotest.dialogs.MemotestDialogColorPallet;
 import com.thebreadiswhite.memotest.activities.classefied.Ui.Visibility;
 import com.thebreadiswhite.memotest.util.FavouriteConst;
 import com.thebreadiswhite.memotest.util.MemotestConfig;
+import com.thebreadiswhite.memotest.outsystems.notifier.Notifier;
 
 import java.util.List;
 
@@ -59,6 +59,7 @@ public class MemotestStackDisplay extends AppCompatActivity implements MemotestD
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memotest_stack_display);
 
+        Notifier notifier = new Notifier(getApplicationContext(), "OH NO", "the title", "the contexnt");
 
         // Checking if an extra has been provided
         if( ! getIntent().hasExtra(MemotestConfig.MEMOTEST_EXTRA_ID_STACK_DISPLAY_CONST))
