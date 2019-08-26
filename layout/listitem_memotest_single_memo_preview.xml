@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@drawable/xml_bottom_border"
+android:paddingBottom="5dp"
+android:paddingTop="5dp"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="38dp"
+    android:layout_height="38dp"
+    android:id="@+id/listitem_memotest_single_circle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:background="@drawable/xml_circle"
+    android:layout_marginStart="12dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkGrey"
+        android:id="@+id/listitem_memotest_single_circle_label"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/listitem_memotest_single_title"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toEndOf="@id/listitem_memotest_single_circle"
+    app:layout_constraintEnd_toStartOf="@id/listitem_memotest_single_customized_background"
+    android:ellipsize="end"
+    android:singleLine="true"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    />
+<ImageView
+    android:layout_width="18dp"
+    android:layout_height="18dp"
+    android:id="@+id/listitem_memotest_single_customized_background"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/listitem_memotest_single_customized_text"
+    app:layout_constraintStart_toEndOf="@id/listitem_memotest_single_title"
+    android:src="@drawable/color_wheel02"
+    android:layout_marginEnd="12dp"
+    />
+
+<ImageView
+    android:layout_width="22dp"
+    android:layout_height="22dp"
+    android:id="@+id/listitem_memotest_single_customized_text"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/listitem_memotest_single_favourite"
+    app:layout_constraintStart_toEndOf="@id/listitem_memotest_single_customized_background"
+    android:src="@drawable/memotest_icon_font_blank"
+    android:layout_marginEnd="12dp"
+    />
+
+<ImageView
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:id="@+id/listitem_memotest_single_favourite"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:src="@drawable/memotest_start_empty"
+    android:layout_marginEnd="12dp"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

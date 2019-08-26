@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+>
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/memotest_listitem_course_timing_alarm_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/circular_clock"
+        />
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/memotest_listitem_course_timing_time"
+                android:text="13:50"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="18sp"
+                android:textColor="@color/darkGrey"
+                android:textStyle="italic"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toEndOf="@id/memotest_listitem_course_timing_alarm_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/memotest_listitem_course_timing_cancel_button"
+
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memotest_listitem_course_timing_cancel_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="4dp"
+
+    >
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/cancel"
+                android:alpha="0.8"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
